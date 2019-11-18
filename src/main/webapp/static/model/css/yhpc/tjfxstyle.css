@@ -1,0 +1,97 @@
+*{font-family:"微软雅黑";font-size:14px;}
+body{background-color: #f3f3f3}
+.fl{float: left;}
+.fr{float: right;}
+.f_blue{color: #00568e;font-weight: bold;}
+.bggrey{background-color: #fafafa;}
+.bggrey1{background-color: #f3f3f3;}
+.mrgr10{margin-right: 10px;}
+.mrgl10{margin-left: 10px;}
+.padtop30{padding-top: 30px;;}
+.box{width:90%; margin: auto;}
+@media only screen and (min-width: 1320px) and (max-width: 1366px) {
+	.box{width:98%; margin: auto;}
+}
+.box1{
+	overflow: hidden;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px #dedede;
+	margin-bottom: 30px;
+	}
+.box1 div.title{
+	text-indent: 1em;
+	margin: 0 20px;
+	border-bottom: 1px dashed #ddd;
+	}
+.box1 h5{margin: 0; line-height: 45px;width:100%}
+.count{overflow: hidden; width: 380px; margin:20px auto;}
+.count img{height: 20px; margin:0;padding:0; border:0; float: left;}
+.size{
+	width:290px;
+	height:164px;}
+.fxd{
+	margin:20px;
+	float:left;
+	}
+.redbg{
+	background: url(../images/red.png);
+}
+.bluebg{
+	background: url(../images/blue.png);
+}
+.yellowbg{
+	background: url(../images/yellow.png);
+}
+.orangebg{
+	background: url(../images/orange.png);
+}
+.greybg{
+	background: url(../images/gray.png);
+}
+
+.state{
+	float: left;
+	width: 88px;
+	}
+.text{padding-right:20px;padding-top:20px;}
+.text dl{margin:0}
+.text dd{color:#646464;}
+.state img{
+	width:40px;
+	margin:56px 14px;
+	}
+	
+/*隐患排查*/
+.box2{
+	overflow: hidden;
+	background-color: #fff;
+	border-bottom: 3px solid #ddd;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	}
+.box2 div.title{
+	text-indent: 1em;
+	margin: 0 20px;
+	border-bottom: 1px solid #ddd;
+	}
+.box2 h5{margin: 0; line-height: 45px;font-size: 16px; font-weight: bold;width:100%}
+.yhpctable dd,.yhpctable dt{padding: 0 10px;line-height: 40px;}
+.yhpctable dt{
+	
+	background-color: #edf7f9;
+	font-weight: normal;
+	}
+.yhpctable dd{
+	background-color: #fafafa;
+	}
+.yhpctable span.f_blue{font-size: 18px;}
+.yhpc2 .col-lg-6{padding: 0;}
+.tip{line-height: 44px;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: #eaeaea;
+	cursor: pointer;}
+.tipcurrent{background-color: #2cb2a8; color: #fff;}

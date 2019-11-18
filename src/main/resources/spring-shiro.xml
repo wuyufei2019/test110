@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="true">
+
+	<context:property-placeholder ignore-unresolvable="true" location="classpath*:/config.properties" />
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="shiroRealm" />
+		<property name="cacheManager" ref="shiroEhcacheManager" />
+	</bean>
+    
+	<bean id="formAuthenticationFilter" class="com.cczu.sys.system.utils.FormAuthenticationCaptchaFilter"/>
+	
+	<bean id="shiroFilter" class="com.cczu.sys.system.utils.MyShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="${adminPath}/login" />
+		<property name="successUrl" value="${adminPath}" />
+		<property name="filters">
+		    <map>
+		        <entry key="authc" value-ref="formAuthenticationFilter"/>
+		    </map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/favicon.ico = anon
+                /lydw/login = anon
+				/api/aqpx/** = anon
+				/static/** = anon
+				/login/** = anon
+                /lydwWebsocket/** = anon <!--websocket  -->
+				/upload/** = anon <!-- 上传文件资源 -->
+				/api/** = anon <!-- 重大危险源实时数据接入接口 -->
+				/system/hotsync/** = anon <!-- 同步接口 -->
+				/webservice/** = anon <!-- app接口 -->
+				/appupload/** = anon <!-- app上传接口 -->
+				/fkcl/fkyy/h5yy = anon <!-- app访客预约接口 -->
+				${adminPath}/login = authc
+				${adminPath}/** = user
+				/ead/yjjc/** = anon <!-- 生成文书截图需要放开拦截 -->
+				/** = user
+				/rest/**=authcBasic
+			</value>
+		</property>
+	</bean>
+	<bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		
+		<property name="globalSessionTimeout" value="${session.sessionTimeout}"/>
+    	<property name="deleteInvalidSessions" value="true"/>
+		<property name="sessionValidationInterval" value="${session.sessionTimeoutClean}"/>
+ 		
+		<property name="sessionIdCookie" ref="sessionIdCookie"/>
+		<property name="sessionIdCookieEnabled" value="true"/>
+	</bean>
+	
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+	    <constructor-arg name="name" value="cczu.session.id"/>
+	</bean>
+	<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:cache/ehcache-shiro.xml"/>
+	</bean>
+	
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+	
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+    	<property name="securityManager" ref="securityManager"/>
+	</bean>
+</beans>

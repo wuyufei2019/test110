@@ -1,0 +1,126 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 17,
+	"data": [
+		{
+			"newsId": "1",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "2",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "3",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "4",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "5",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "6",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "7",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "8",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "9",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "10",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "11",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "12",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "13",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "14",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "15",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "16",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		},
+		{
+			"newsId": "17",
+			"newsName": "超级管理员",
+			"phone": "所有权限",
+			"newsAuthor": "拥有平台系统功能的所有操作权限",
+			"newsImg":"../../images/userface1.jpg"
+		}
+	]
+}

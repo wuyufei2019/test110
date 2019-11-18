@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd"
+	default-lazy-init="false">
+
+    <context:annotation-config />  
+
+	<context:component-scan base-package="com.cczu">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+	
+	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+		<property name="url" value="${jdbc_url}" />
+		<property name="username" value="${jdbc_username}" />
+		<property name="password" value="${jdbc_password}" />
+		<property name="dbType" value = "sqlserver" />
+		<property name="initialSize" value="0" />
+		<property name="maxActive" value="50" />
+		<property name="minIdle" value="0" />
+		<property name="maxWait" value="60000" />
+		<property name="validationQuery" value="${validationQuery}" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="3000000" />
+		<property name="removeAbandoned" value="true" />
+		<property name="removeAbandonedTimeout" value="1800" />
+		<property name="logAbandoned" value="true" />
+
+		<property name="filters" value="mergeStat" />
+	</bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="namingStrategy">
+			<bean class="org.hibernate.cfg.ImprovedNamingStrategy" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<!--<prop key="hibernate.dialect">${hibernate.dialect}</prop>-->
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+     			<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+     			<prop key="net.sf.ehcache.configurationResourceName">${hibernate.ehcache.configFile}</prop>
+			</props>
+		</property>
+
+		<property name="packagesToScan" >
+		 	<list>  
+            	<value>com.cczu.model.entity</value>  
+            	<value>com.cczu.sys.system.entity</value>
+            	<value>com.cczu.model.**.entity</value>
+            </list>
+		</property>
+	</bean>
+	
+	<!-- kaptcha配置 -->
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">  
+                <constructor-arg>  
+                    <props>  
+                        <prop key="kaptcha.border">no</prop>  
+                        <prop key="kaptcha.border.color">105,179,90</prop>  
+                        <prop key="kaptcha.textproducer.font.color">28,83,121</prop>  
+                        <prop key="kaptcha.image.width">106</prop>  
+                        <prop key="kaptcha.image.height">35</prop>  
+                        <prop key="kaptcha.textproducer.font.size">30</prop>  
+                        <prop key="kaptcha.textproducer.char.space">8</prop>
+                        <prop key="kaptcha.session.key">code</prop>  
+                        <prop key="kaptcha.textproducer.char.length">4</prop>  
+                        <prop key="kaptcha.textproducer.font.names">宋体</prop>  
+                        <!-- 验证码图片干扰 -->
+                        <prop key="kaptcha.obscurificator.impl">com.cczu.util.common.NoGimpy</prop>
+                        <!-- 去除干扰线 -->
+                        <prop key="kaptcha.noise.impl">com.google.code.kaptcha.impl.NoNoise</prop>
+                        <!-- 背景色渐变 -->
+                        <prop key="kaptcha.background.clear.from">217,223,219</prop>
+                    </props>  
+                </constructor-arg>  
+            </bean>  
+        </property>  
+    </bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
+        <property name="sessionFactory" ref="sessionFactory" />  
+    </bean>
+    
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:${ehcache.configFile}" />
+	</bean>
+	
+	<task:annotation-driven scheduler="qbScheduler" mode="proxy"/>  
+    <task:scheduler id="qbScheduler" pool-size="10"/>
+</beans>

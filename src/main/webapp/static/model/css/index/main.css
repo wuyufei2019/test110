@@ -1,0 +1,124 @@
+html{*overflow:auto;}
+#container{position:relative;}
+/*页面头部*/
+#hd{ position:relative; width:100%; height:114px; background:rgb(62, 123, 186); z-index:2;}
+.hd-top{height:64px;background:url(../../images/com/bg_head.png);background-position: left;}
+/*logo*/
+.hd-top .logo{ position:absolute; float:left;height: 64px; margin-top: 0px; width:900px; color: #ffffff;font-size: 18px;font-weight: bold;}
+.hd-top .logo .logo-icon{ position:absolute; right:0; top:18px; width:16px; height:15px; background:url(../../images/index/skin_/topxl.png);}
+.hd-top .logo .logo-icon:hover,.hd-top .logo .logo-icon.active{ background:url(../../images/index/skin_/switch-system/h.png);}
+/*用户登录信息*/
+.hd-top .user-info{ float:right; margin-right:30px; height:49px; line-height:49px; margin-top: 9px;}
+.hd-top .user-info .user-avatar{ position:relative; float:left; margin-top:6px; width:40px; height:40px; background:url(../../images/index/skin_/userfacebg.png); }
+.hd-top .user-info .user-avatar span{ position:absolute; top:2px; left:2px; width:34px; height:34px; background:url(../../images/index/skin_/userface.png);}
+.hd-top .user-info .user-avatar span .info-num{ position:absolute; top:-4px; right:-4px; width:16px; height:16px; line-height:16px; text-align:center; background:url(../../images/index/skin_/msg.png); color:#fff; font-style:normal;}
+.hd-top .user-info .user-name{ float:left; margin-left:6px; color:#fff;}
+.hd-top .user-info .more-info{ float:left; margin:19px 0 0 10px;width:16px;height:15px; background:url(../../images/index/skin_/userxl.png) center center no-repeat;}
+.hd-top .user-info .more-info.active,.hd-top .user-info .more-info:hover{ width:16px;height:15px;background:url(../../images/index/skin_/topxl.png);}
+/*顶部设置部分*/
+.hd-top .setting{ float:right; height:49px; margin-right:70px; line-height:49px;margin-top: 9px;}
+.hd-top .setting .setting-skin{ float:left;}
+.hd-top .setting .setting-skin{float:left;position:relative;margin-right:5px;margin:10px 8px 0 0;text-align:center; cursor:pointer;}
+.hd-top .setting .setting-skin .text{line-height:28px;*position:relative;*top:-10px;color:#666;}
+.hd-top .setting .setting-skin i{position:absolute;}
+.hd-top .setting .setting-skin i.skin-icon{left:11px;top:6px;width:16px; height:16px; background:url(../../images/index/skin_/xxzx.png);}
+.hd-top .setting .setting-skin .info-num{ position:absolute; top:-4px; right:-4px; width:16px; height:16px; line-height:16px; text-align:center; background:url(../../images/index/skin_/msg.png); color:#fff; font-style:normal;}
+.hd-top .setting .setting-skin i.arrow-icon{right:12px;top:12px;width:7px; height:4px; background:url(../../images/index/skin_/skinxl.png);}
+.hd-top .setting .setting-skin:hover i.arrow-icon{background-position:-7px 0;}
+.hd-top .setting .setting-skin .switch-bar{width:150px;height:29px; background:url(../../images/index/skin_/skin-bg.png);}
+.hd-top .setting .setting-main{ float:left; width:200px;}
+.hd-top .setting .setting-main li{ float:left; width:38px;text-align:center; }
+.hd-top .setting .setting-main li a{color:#fff;}
+.hd-top .setting .setting-main li a:hover{text-decoration:none;color:#000;}
+.hd-top .setting .setting-main li a.close-btn{ float:left; margin:16px 0 0 11px; width:14px; height:14px;background:url(../../images/index/skin_/quit.png);}
+.hd-top .setting .setting-main li a.screen-btn{ float:left; margin:16px 0 0 11px; width:14px; height:14px;background:url(../../images/index/skin_/quit.png);}
+.hd-top .setting .setting-main li a.close-btn:hover{ background-position:-14px 0;}
+/*顶部导航*/
+.hd-bottom{position:relative;line-height:45px;padding:0 130px 0 10px; overflow:hidden;background:url(../../images/index/bg.jpg);}
+
+.hd-bottom .nav-wrap{position:relative;float:left;overflow:hidden;width:100%;height:45px;}
+.hd-bottom .nav{position:absolute;left:0;float:left;height:45px;font-size:14px;}
+.hd-bottom .nav li{float:left;/* width:120px;  */text-align:center;}
+.hd-bottom .nav li img{float:left;margin-top: 7px;margin-right: 3px;height: 30px;}
+.hd-bottom .nav li>a{ color:#fff; display: inline-block;margin: 0 0px;padding:0 10px;}
+.hd-bottom .nav li>a:hover{
+    color:#1b3160;
+    text-decoration:none;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid #1b3160;
+    border-bottom: 0;
+}
+.hd-bottom .nav li>a.active {
+    color:#1b3160;
+    text-decoration:none;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid #1b3160;
+    border-bottom: 0;
+}
+
+.hd-bottom .nav-btn{position:absolute;right:15px;margin:11px 12px 0 0;}
+.hd-bottom .nav-btn a{ float:left; width:22px; height:23px;}
+.hd-bottom .nav-btn a.nav-prev-btn{ background:url(../../images/index/skin_/leftright.png);}
+.hd-bottom .nav-btn a.nav-prev-btn:hover{background:url(../../images/index/skin_/leftright.png) 0 -23px;}
+.hd-bottom .nav-btn a.nav-next-btn{ background:url(../../images/index/skin_/leftright.png) -23px -23px;}
+.hd-bottom .nav-btn a.nav-next-btn:hover{ background:url(../../images/index/skin_/leftright.png) -23px 0;}
+.hd-bottom a.nav-add-btn{  float:left;width:22px; height:23px;background:url(../../images/index/add.jpg);background-size: contain;position:absolute;right:80px;margin:11px 12px 0 0;}
+
+#bd{ position:relative;margin-top:6px}
+
+/*页面底部*/
+#ft{ height:29px; line-height:29px; background:url(../../images/index/skin_/footerbg.png) repeat-x;}
+.ft1{ float:left;}
+.ft1 .ft-icon1{ float:left; margin:8px 5px 0 11px; width:14px; height:14px; background:url(../../images/index/skin_/i.png);}
+.ft1 span{ float:left; color:#5f5f5f; }
+.ft1 em{ float:left; color:#a6a6a6;}
+
+.ft2{ float:right;}
+.ft2 span{ float:left; color:#5f5f5f; }
+.ft2 em{ float:left; color:#a6a6a6;}
+.ft2 .ft-icon2{ float:left; margin:12px 11px 0 9px; width:4px; height:7px; background:url(../../images/index/skin_/footerright.png);}
+
+/*弹窗*/
+.buttons{margin-top:30px;}
+.buttons input[type=button]{margin-right:5px;}
+
+.user-opt{display:none;}
+.user-opt ul{max-width:200px;}
+.user-opt li{display:block;font-size:14px;}
+.user-opt li a.text{display:block;padding:5px 20px;color:#000;}
+.user-opt li a.text:hover{text-decoration:none;}
+.user-opt li a.text .num{margin-left:5px;color:#f24a39;}
+.user-opt li:first-child{margin-top:0;}
+.user-opt li:hover a{background:#e8e8e8;}
+
+
+.skin-opt{display:none;width:130px;}
+
+.skin-opt li{display:block;font-size:14px;}
+.skin-opt li a.text{display:block;padding:5px 20px;color:#000;}
+.skin-opt li a.text:hover{text-decoration:none;}
+.skin-opt li a.text .num{margin-left:5px;color:#f24a39;}
+.skin-opt li:first-child{margin-top:0;}
+.skin-opt li:hover a{background:#e8e8e8;}
+
+.uew-opt-panel{position:absolute;z-index:120;}
+.uew-opt-panel ul{padding:5px 0;border:1px solid #CACACA;box-shadow:1px 1px 4px rgba(102,102,102,0.3);background:#fff;}
+.uew-opt-panel li{position:relative;}
+.uew-opt-panel li a{position:relative;display:block;min-width:48px;height:28px;padding:0 25px 0 15px;white-space:nowrap;color:#3C3C3C;line-height:28px;text-decoration:none;}
+.uew-opt-panel li a .uew-icon2{position:absolute;right:3px;top:6px;}
+/***** 第二层面 *****/
+.uew-opt-panel ul ul{position:absolute;left:102px;top:0px;box-shadow:1px 1px 4px rgba(102,102,102,0.3);}
+
+.system-switch{ display:none;position:absolute;top:64px;left:0; z-index:111;font-size:14px;min-width:235px;}
+.system-switch ul{background:#f2f2f2;padding:12px 0;}
+.system-switch ul li{position:relative;}
+.system-switch ul li i{/*position:absolute;*/float:left;margin:8px 8px 0 0;width:4px;height:6px;background:url(../../images/index/skin_/switch-system/toplist.png);}
+.system-switch ul li .system-name{position:relative;display:block;padding:6px 30px; cursor:pointer;}
+.system-switch ul li .system-name:hover{background:#fff;color:#37a8dd;}
+.system-switch .opt-panel-mr{position:absolute;top:0;bottom:5px;right:-6px;width:6px;background:url(../../images/index/skin_/switch-system/sright.png);}
+.system-switch .opt-panel-bc{position:absolute;left:0;bottom:-9px;right:5px;height:9px;background:url(../../images/index/skin_/switch-system/sdown.png);}
+.system-switch .opt-panel-br{position:absolute;bottom:-9px;right:-6px;width:11px;height:14px;background:url(../../images/index/skin_/switch-system/yj.png);}

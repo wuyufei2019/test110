@@ -1,0 +1,1078 @@
+{
+	"xtsy": [
+		{
+			"title": "企业信息导入",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "企业基本情况表",
+					"icon": "icon-text",
+					"href": "upload/combasic/list",
+					"spread": false
+				}, {
+					"title": "14-18年数据录入",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业能源管理",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "工艺流程及简述",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "设备台账导入",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "计量器具导入",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "园区政府主管单位",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "园区土地使用",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "煤质分析",
+					"icon": "icon-text",
+					"href": "page/upload/combasic/demo.html",
+					"spread": false
+				}, {
+					"title": "行业标准维护",
+					"icon": "icon-text",
+					"href": "",
+					"spread": false,
+					"children": [
+						{
+							"title": "设备能效标准",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "能耗限额标准",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "国家重点节能技术推广目录",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "高耗能机电设备（产品）淘汰目录",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}
+					]
+				}, {
+					"title": "园区基本情况",
+					"icon": "icon-text",
+					"href": "",
+					"spread": false,
+					"children": [
+						{
+							"title": "园区基本情况表上传",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "园区企业统计表上传",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "园区循环化改造指标",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "园区“双控”指标",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "园区碳排放指标",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}
+					]
+				}
+			]
+		}
+	],
+	"jbrz": [
+		{
+			"title": "企业能源利用数据",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "企业能源消费数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业非化石能源利用数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "企业资源利用数据",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "企业大宗原料消耗数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业水资源利用数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业固体废弃物数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业余热余压数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业废水数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "温室企业气体和污染物排放数据",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "温室气体排放数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业污染物排放数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "企业经济指标数据",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "工业产销总值及主要产品产量数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "工业企业成本费用数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}
+	],
+	"yhrw": [
+		{
+			"title": "节能监察通知",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "起草通知",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "选择监察企业",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "发布节能监察通知",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "重点用能单位节能监察",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "重点用能单位节能监察综合评价表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "园区主管部门现场监察",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "节能监查报告",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "形成报告",
+					"icon": "icon-text",
+					"href": "",
+					"spread": false,
+					"children": [
+						{
+							"title": "各企业节能监察报告",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}, {
+							"title": "各企业分类排名",
+							"icon": "icon-text",
+							"href": "page/device/deviceAdd.html",
+							"spread": false
+						}
+					]
+				}, {
+					"title": "报告审核",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, 
+		{
+			"title": "节能监察结果公示",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "发布节能节能监察报告",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "发布分类排名公告",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		},
+		 {
+			"title": "行政处罚程序",
+			"icon": "&#xe630;",
+			"href": "page/device/deviceAdd.html",
+			"spread": false
+		}
+	],
+	"sblb": [
+		{
+			"title": "排污监察通知",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "起草通知",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "选择监察对象",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "发布排污监察通知",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "重点用能单位排污监察",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				 {
+					"title": "重点排污企业监察综合评价表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "园区主管部门现场监察",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "温室企业气体和污染物排放数据",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "温室气体排放数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业污染物排放数据",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "排污监查报告",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "形成报告",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "报告审核",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "排污监察结果公示",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "发布排污监察报告",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "发布园区排污指标完成情况表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "行政处罚程序",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "形重点监控企业严重超标处置情况及整改措施成报告",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}
+	],
+	"ydjk": [
+		{
+			"title": "企业基本概况",
+			"icon": "&#xe630;",
+			"href": "page/device/deviceAdd.html",
+			"spread": false
+		}, {
+			"title": "能源管理",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				 {
+					"title": "能源管理制度",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "能源管理岗位设立和能源管理负责人聘任制度情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "能源管理人员和重点用能设备操作人员培训情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "主要生产工艺及能源消耗",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "生产工艺流程及简述",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业综合能耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "产品产量表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "企业工序能耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "产品单耗指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "主要耗能设备",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "重点耗能设备台账",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "主要耗能设备能效分析",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "拟淘汰的设备",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "能源计量器",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "能源计量器具台账",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "能源计量器具配备率",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "节能措施及节能量",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "已实施的节能措施及相应的节能量",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "计划实施的节能措施及相应的节能量",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "能耗指标对比",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "工业增加值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "单耗指标对标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "存在问题",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "工艺技术方面",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "能源管理方面",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产品结构方面",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "结论",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "指标汇总",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "定性结论",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "生成审计报告",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "审核通过，发布",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}
+	],
+	"dlsy": [
+		{
+			"title": "目标导入",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "双控目标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "碳排放目标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "循环化改造目标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "根据企业上传数据自动生成实际指标",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				 {
+					"title": "资源产出指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "资源消耗指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "重点单位产品能耗指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "资源综合利用指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "其他指标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "形成指标值完成情况对比表",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "双控指标完成情况表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "碳排放指标完成情况表",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}
+	],
+	"xmgl": [
+		{
+			"title": "园区整体查询",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				 {
+					"title": "生产总值",
+					"icon": "icon-text",
+					"href": "page/table-gov/demo.html",
+					"spread": false
+				},
+				 {
+					"title": "综合能耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "水资源消耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "资源综合消耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "主要产品产量",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "主要产品单耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "主要产品水耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "万元GDP能耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "万元GDP水耗",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "固体废弃物排放及再利用情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "温室气体排放情况情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "SO2、化学需氧量、氨氮、氮氧化物排放量",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "余热余压产生及再利用情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "废水排放及循环利用情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "近三年土地使用情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "节能监察达标/不达标企业名单",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},
+				 {
+					"title": "排污监察达标/不达标企业名单",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "电力企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "机组容量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "原煤消耗量、综合能耗及发电量、供电量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "原煤热值对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "发电煤耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "电煤耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "单耗对标情况",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "粉煤灰、炉渣、脱硫石膏产生量及利用量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "有色金属冶炼企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "电解铝产能对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "电厂原煤消耗量及发电量、供电量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "电厂原煤热值对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "电厂发电煤耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "电厂供电煤耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "铝厂铝锭产量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "铝厂铝液交流电耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "铝厂铝锭综合交流电耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "铝厂铝锭综合能源单耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "废铝灰、废炭渣产生量及处理量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "煤炭开采企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "煤矿生产能力对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "原煤产量及综合能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "单位产品能耗对标",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}, {
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "有色金属压延企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "铝材产能对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "综合能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产品产量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "单位产品能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "石墨及其他非金属企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "非金属产能对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "综合能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产品产量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "单位产品能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}, {
+			"title": "化学原料与化学制品制造企业",
+			"icon": "&#xe630;",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "产品种类、产能对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "同类产品综合能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "同类产品产量对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "同类单位产品能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				},{
+					"title": "产值能耗对比",
+					"icon": "icon-text",
+					"href": "page/device/deviceAdd.html",
+					"spread": false
+				}
+			]
+		}
+	],
+	"xtsz": [
+		{
+			"title": "用户设置",
+			"icon": "icon-text",
+			"href": "page/system/userList.html",
+			"spread": false
+		}, {
+			"title": "角色设置",
+			"icon": "icon-text",
+			"href": "page/system/roleList.html",
+			"spread": false
+		}, {
+			"title": "权限设置",
+			"icon": "icon-text",
+			"href": "page/404.html",
+			"spread": false
+		}, {
+			"title": "密码设置",
+			"icon": "icon-text",
+			"href": "page/system/changePwd.html",
+			"spread": false
+		}
+		, {
+			"title": "操作日志",
+			"icon": "icon-text",
+			"href": "page/system/logOperate.html",
+			"spread": false
+		}
+	]
+}
+
+

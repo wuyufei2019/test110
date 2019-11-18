@@ -1,0 +1,150 @@
+/* 清空浏览器默认样式*/
+
+html{color:#000;background:#FFF;}   
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,   
+fieldset,input,textarea,p,blockquote,th,td {   
+margin:0;   
+padding:0;   
+}   
+table{   
+border-collapse:collapse;   
+border-spacing:0;   
+}   
+fieldset,img {   
+border:0;   
+}   
+address,caption,cite,code,dfn,em,strong,th,var {   
+font-style:normal;   
+font-weight:normal;   
+}   
+ol,ul {   
+list-style:none;   
+}   
+caption,th {   
+text-align:left;   
+}   
+h1,h2,h3,h4,h5,h6 {   
+font-size:100%;   
+font-weight:normal;   
+}   
+q:before,q:after {   
+content:'';   
+}   
+abbr,acronym { border:0;   
+}   
+@charset "utf-8";  
+*{  
+    margin: 0px;  
+    padding: 0px;  
+      
+}   
+a{  
+    text-decoration: none;  
+    color: #000000;  
+    font-size:15px;  
+    /*字体*/  
+}  
+li{  
+    list-style: none;  
+}  
+input,img{  
+    border: none;  
+}
+
+
+/* fengmap style */
+html, body
+{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu
+}
+
+#fengMap,#fengMapContainer
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.btns
+{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+}
+
+.btns button
+{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.operating{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+}
+.operating button {
+    display: block;
+    margin-bottom: 10px;
+}
+.panel {
+    background: #F1F2F7;
+   border: none;
+   border-radius: none;
+   box-shadow:none;
+}
+.panel-info {
+border: none;
+}
+
+#control
+{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+}
+#control label{
+    font-weight: 500;
+}
+#control input{
+    vertical-align: top;
+}
+
+#description
+{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    padding: 10px 25px;
+    background: rgba(255,255,255,.5);
+    border-radius:4px;
+}
+
+.fm-control-popmarker {
+    padding: 5px !important;
+}
+.fm-control-popmarker .popMarkerDiv{
+    height: 70px !important;
+    line-height: 30px;
+    text-align: center;
+}
+/*cap
+.fm-control-popmarker div {
+    height: 90px;
+}*/
+
+/*
+.fm-control-popmarker input[type='button'] {
+    display: none;
+}
+
+.fm-control-popmarker .fm-control-popmarker-top,
+.fm-control-popmarker .fm-control-popmarker-bot {
+    border-width: 10px !important;
+    left: 35px !important;
+    bottom: -20px !important;
+}*/

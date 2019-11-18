@@ -1,0 +1,76 @@
+._htools-select{
+    display: inline-block;
+    margin: 0;
+    background-color: #002d75;
+    border: solid #01faf3 1px;
+    border-radius: 5px;
+    vertical-align: middle;
+    transition: border 0.5s;
+    -moz-transition: border 0.5s;	/* Firefox 4 */
+    -webkit-transition: border 0.5s;	/* Safari 鍜�Chrome */
+    -o-transition: border 0.5s;
+}
+._htools-select:hover{
+	cursor: pointer;
+}
+._htools-select *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+._htools-select:hover ._select-selectbtn{
+    border-top-color: dodgerblue;
+    transition: border-top-color 0.5s;
+    -moz-transition: border-top-color 0.5s;	/* Firefox 4 */
+    -webkit-transition: border-top-color 0.5s;	/* Safari 鍜�Chrome */
+    -o-transition: border-top-color 0.5s;
+}
+._htools-select:hover{
+    border: solid dodgerblue 1px;
+}
+._htools-select ._select-input{
+    color: #fff; display: inline-block; font-size: 14px;margin-left: 5px
+}
+._htools-select ._select-selectbtn{
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 7px solid #01faf3;
+    display: inline-block;
+}
+._htools-select ._select-select-ul{
+    background-color: white; outline: none;
+    /*border: solid dodgerblue 1px; border-top: none;*/
+    position: relative;
+    z-index: 10;
+    display: none;
+    -webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.18);
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.18);
+    border: 1px solid aqua;
+    border-radius: 5px;
+    overflow-x: hidden;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+._htools-select ._select-select-ul li{
+    background-color: #002d75;
+    color: white;
+    font-size: 14px;
+    padding: 3px 6px;
+    cursor: pointer;
+    list-style-type:none;
+    transition: color 0.5s, background-color 0.5s;
+    -moz-transition: color 0.5s, background-color 0.5s;	/* Firefox 4 */
+    -webkit-transition: color 0.5s, background-color 0.5s;	/* Safari 鍜�Chrome */
+    -o-transition: color 0.5s, background-color 0.5s;
+}
+._htools-select ._select-select-ul li._select-li-selected{
+    background-color: #175a98;
+    color: #01faf3;
+}
+._htools-select ._select-select-ul li:hover{
+    background-color: dodgerblue;
+    color: white;
+}

@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+/* 目前三界菜单未页面内下拉选操作 次css仅针对该类菜单下iframe 页面的样式调整 */
+
+body {
+	padding: 0px;
+	width: 100%;
+	height: 100%
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+	height: 10px;
+	background-color: #e2e2e2;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: #f2f2f2;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #c1c1c1b3;
+}

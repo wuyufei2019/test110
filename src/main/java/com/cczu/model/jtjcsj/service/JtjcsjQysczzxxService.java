@@ -1,0 +1,115 @@
+package com.cczu.model.jtjcsj.service;
+
+import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cczu.model.jtjcsj.dao.JtjcsjQysczzxxDao;
+import com.cczu.model.jtjcsj.entity.Jtjcsj_QysczzxxEntity;
+import com.cczu.sys.comm.utils.DateUtils;
+import com.cczu.sys.system.utils.UserUtil;
+
+/**
+ * 静态基础数据-企业生产装置信息Service
+ * @author Administrator
+ *
+ */
+@Transactional(readOnly=true)
+@Service("JtjcsjQysczzxxService")
+public class JtjcsjQysczzxxService {
+	
+	
+	@Resource
+	private JtjcsjQysczzxxDao jtjcsjQysczzxxDao;
+	
+	
+	/**
+	 * 分页查询
+	 * @param map
+	 * @return
+	 */
+	public Map<String, Object> dataGrid(Map<String, Object> mapData) {
+		List<Map<String, Object>> list=jtjcsjQysczzxxDao.dataGrid(mapData);
+		int getTotalCount=jtjcsjQysczzxxDao.getTotalCount(mapData);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("rows", list);
+		map.put("total", getTotalCount);
+		return map;
+	}
+
+	
+	/**
+	 * 添加信息
+	 * @param entity
+	 */
+	public void addInfo(Jtjcsj_QysczzxxEntity entity) {
+		Timestamp t=DateUtils.getSysTimestamp();
+		entity.setCreatetime(t);//创建时间
+		entity.setUpdatetime(t);//最后修改时间
+		entity.setCreator(UserUtil.getCurrentUser().getName());//创建人
+		entity.setUpdator(UserUtil.getCurrentUser().getName());//最后修改人
+		entity.setStatus("0");//删除标识
+		jtjcsjQysczzxxDao.save(entity);
+	}
+
+	/**
+	 * 根据id查询信息
+	 * @param id
+	 * @return
+	 */
+	public Map<String, Object> findInfoById(Long id) {
+		return jtjcsjQysczzxxDao.findInfoById(id);
+	}
+
+	
+	/**
+	 * 修改信息
+	 * @param entity
+	 */
+	public void updateInfo(Jtjcsj_QysczzxxEntity entity) {
+		Timestamp t=DateUtils.getSysTimestamp();
+		entity.setUpdatetime(t);//最后修改时间
+		entity.setUpdator(UserUtil.getCurrentUser().getName());//最后修改人
+		jtjcsjQysczzxxDao.save(entity);
+	}
+
+	/**
+	 * 根据id删除信息
+	 * @param parseLong
+	 */
+	public void deleteInfo(Long id) {
+		jtjcsjQysczzxxDao.delete(id);
+	}
+
+	
+	/**
+	 * 企业生产装置Json
+	 * @param qyid
+	 * @return
+	 */
+	public List<Map<String, Object>> findSczzJson(Long qyid) {
+		return jtjcsjQysczzxxDao.findSczzJson(qyid);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

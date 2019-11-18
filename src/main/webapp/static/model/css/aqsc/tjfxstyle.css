@@ -1,0 +1,25 @@
+*{font-family:"微软雅黑";font-size:14px;}
+body{background-color: #f3f3f3}
+.bggrey{background-color: #fafafa;}
+.bggrey1{background-color: #f3f3f3;}
+.padtop30{padding-top: 30px;;}
+.box{width:90%; margin: auto;}
+@media only screen and (min-width: 1320px) and (max-width: 1366px) {
+	.box{width:98%; margin: auto;}
+}
+	
+/*隐患排查*/
+.box2{
+	overflow: hidden;
+	background-color: #fff;
+	border-bottom: 3px solid #ddd;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	}
+.box2 div.title{
+	text-indent: 1em;
+	margin: 0 20px;
+	border-bottom: 1px solid #ddd;
+	}
+.box2 h5{margin: 0; line-height: 45px;font-size: 16px; font-weight: bold;width:100%}
+.fytj .col-lg-6{padding: 0;width:100%}

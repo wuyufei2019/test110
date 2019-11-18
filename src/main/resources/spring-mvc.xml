@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder ignore-unresolvable="true" location="classpath*:/config.properties" />
+
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<context:component-scan base-package="com.cczu" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+	
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+		    	<constructor-arg value="UTF-8" />
+			</bean>
+  		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+		    	<constructor-arg value="UTF-8" />
+			</bean>
+  		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<!-- 
+	<mvc:interceptors>
+		<bean class="com.cczu.sys.system.interceptor.LogInterceptor"/>
+	</mvc:interceptors>
+ 	-->
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/webpage/modules/" />
+        <property name="suffix" value=".jsp" />
+        <property name="order" value="1"/>
+    </bean>
+
+    <bean id="freemarkConfig" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:freemarker.properties"/>
+    </bean>
+    <bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/templates/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="freemarkerSettings" ref="freemarkConfig"/>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="xml_escape" value-ref="fmXmlEscape"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="contentType" value="text/html;charset=UTF-8"/>      
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="cache" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="exposeRequestAttributes" value="true"/>     
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <!-- 在页面中使用${rc.contextPath}就可获得contextPath -->
+        <property name="requestContextAttribute" value="request"/>
+        <property name="order" value="0"/>
+    </bean>
+    
+	<mvc:default-servlet-handler/>
+
+	<!--<mvc:view-controller path="/" view-name="/system/index"/> -->
+	<!--<mvc:view-controller path="/a" view-name="/system/index-new"/>-->
+	<!--<mvc:view-controller path="/en" view-name="/system/index_en"/>-->
+	
+	<!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+		<property name="exceptionMappings">  
+			<props>
+				<prop key="org.apache.shiro.authz.UnauthorizedException">../error/403</prop>
+				<prop key="java.lang.Throwable">../error/500</prop>
+            </props>  
+		</property>  
+    </bean> -->
+	
+	
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+        <!-- <property name="maxUploadSize" value="${web.maxUploadSize}" />    --> 
+    </bean>
+</beans>  

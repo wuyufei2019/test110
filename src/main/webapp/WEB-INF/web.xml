@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>cczu</display-name>
+	<!-- spring hibernate -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:/spring.xml,
+		    		classpath*:/spring-config.xml,
+		    		classpath*:/spring-shiro.xml
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>spring.profiles.default</param-name>
+		<param-value>production</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+    <!--websocket-->
+    <listener>
+        <listener-class>com.cczu.websocket.RequestListener</listener-class>
+    </listener><!--蓝牙-->
+	<listener>
+		<listener-class>com.cczu.model.lydw.listener.MsgServer</listener-class>
+	</listener>
+	<!-- 过滤器配置 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>ajaxFilter</filter-name>
+		<filter-class>com.cczu.sys.system.utils.AjaxFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ajaxFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
+	<!-- SiteMesh 的配置 -->
+	<filter>
+		<filter-name>sitemeshFilter</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemeshFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!--spring mvc 配置 -->
+	<servlet>
+		<servlet-name>springMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup> <!-- 是启动顺序，让这个Servlet随Servletp容器一起启动。 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springMVC</servlet-name>
+		<url-pattern>/</url-pattern> <!-- 会拦截/的请求。 -->
+	</servlet-mapping>
+
+	<!-- 配置 Druid 监控信息显示页面 -->
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+	<!-- 配置 Druid  url监测 -->
+	<filter>
+		<filter-name>DruidWebStatFilter</filter-name>
+		<filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+		<init-param>
+			<param-name>exclusions</param-name>
+			<param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+		</init-param>
+		<init-param>
+			<param-name>profileEnable</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>principalSessionName</param-name>
+			<param-value>org.apache.shiro.subject.support.DefaultSubjectContext_PRINCIPALS_SESSION_KEY</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>DruidWebStatFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- CXF -->
+	<servlet>
+		<servlet-name>cxf</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cxf</servlet-name>
+		<url-pattern>/webservice/*</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/webpage/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/webpage/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/webpage/error/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/webpage/error/403.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>400</error-code>
+		<location>/WEB-INF/webpage/error/400.jsp</location>
+	</error-page>
+</web-app>

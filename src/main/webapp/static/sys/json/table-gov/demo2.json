@@ -1,0 +1,63 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 6,
+	"data": [
+		{
+			"id": "1",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_001","rowTop": ""
+		},
+		{
+			"id": "2",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_002","rowTop": ""
+		},{
+			"id": "3",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_003","rowTop": ""
+		},{
+			"id": "4",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_004","rowTop": ""
+		},{
+			"id": "5",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_005","rowTop": ""
+		},{
+			"id": "6",
+			"username": "黑龙江享易科技有限公司",
+			"province": "化学原料与化学制品制造业",
+			"city": "city","city2": "city",
+			"province2": "province",
+			"street": "street",
+			"address": "address",
+			"house": "house","id2":"cap_006","rowTop": ""
+		}
+	]
+}

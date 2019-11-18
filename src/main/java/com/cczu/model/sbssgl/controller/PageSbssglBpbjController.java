@@ -1,0 +1,156 @@
+package com.cczu.model.sbssgl.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cczu.model.entity.BIS_EnterpriseEntity;
+import com.cczu.model.sbssgl.entity.SBSSGL_SBGLEntity;
+import com.cczu.model.sbssgl.service.SBSSGLBpbjService;
+import com.cczu.model.sbssgl.service.SBSSGLSbglService;
+import com.cczu.model.service.impl.BisQyjbxxServiceImpl;
+import com.cczu.sys.comm.controller.BaseController;
+import com.cczu.sys.comm.mapper.JsonMapper;
+import com.cczu.sys.system.service.ShiroRealm.ShiroUser;
+import com.cczu.sys.system.utils.UserUtil;
+
+/**
+ * 设备设施管理-备品备件controller
+ */
+@Controller
+@RequestMapping("sbssgl/bpbj")
+public class PageSbssglBpbjController extends BaseController {
+
+	@Autowired
+	private SBSSGLBpbjService sBSSGLBpbjService;
+	@Autowired
+	private BisQyjbxxServiceImpl qyjbxxServiceImpl;
+	@Autowired
+	private SBSSGLSbglService sBSSGLSbglService;
+	
+	/**
+	 * 列表显示页面
+	 * @param model
+	 */
+	@RequestMapping(value="index")
+	public String index(Model model, HttpServletRequest request) {
+		ShiroUser sessionuser= UserUtil.getCurrentShiroUser();
+		if(sessionuser.getUsertype().equals("1")){//企业用户
+			BIS_EnterpriseEntity be = qyjbxxServiceImpl.findInfoById(sessionuser.getQyid());
+			if(be!=null&&be.getM1()!=null){//判断是否添加了企业基本信息
+				if(be.getIsbloc()!=null&&be.getIsbloc()==1)//判断是否为集团公司
+					model.addAttribute("type","2");//集团公司
+				else
+					model.addAttribute("type","1");//子公司
+			}else//未添加企业基本信息错误提示页面
+				return "../error/001";
+		}else{
+			return "../error/403";
+		}
+		
+		if ("tzsb".equals(request.getParameter("sbtype"))) {
+			model.addAttribute("sbtype","1");//特种设备
+		} else {
+			model.addAttribute("sbtype","0");//普通设备
+		}
+		return "sbssgl/bpbj/index";
+	}
+	
+	/**
+	 * list页面
+	 * @param request
+	 */
+	@RequestMapping(value="list")
+	@ResponseBody
+	public Map<String, Object> getData(HttpServletRequest request) {
+		Map<String, Object> map = getPageMap(request);
+		map.put("sbtype", request.getParameter("sbtype"));
+		map.put("qyname", request.getParameter("qyname"));
+		map.put("m1", request.getParameter("m1"));
+		map.put("m2", request.getParameter("m2"));
+		map.put("m23", request.getParameter("m23"));
+		map.put("m20", "0");//关联A类设备
+		map.put("m26", request.getParameter("m26"));
+		map.putAll(getAuthorityMap());
+		return sBSSGLSbglService.dataGrid2(map);
+	}
+
+	
+	/**
+	 * 添加/查看页面跳转（用户具有添加权限）
+	 * @param model
+	 */
+	@RequestMapping(value = "create/{sbid}" , method = RequestMethod.GET)
+	public String create(@PathVariable("sbid") Long sbid,Model model,HttpServletRequest request) {
+		List<Map<String, Object>> bpbjList = sBSSGLBpbjService.findListBySbId(sbid);
+		model.addAttribute("action", "create");
+		model.addAttribute("sbtype", request.getParameter("sbtype"));
+		model.addAttribute("sbid", sbid);//设备id   
+		model.addAttribute("bpbjlist", JsonMapper.toJsonString(bpbjList));
+		return "sbssgl/bpbj/form";
+	}
+	
+	/**
+	 * 添加信息
+	 * @param request,model
+	 */
+	@RequestMapping(value = "create" , method = RequestMethod.POST)
+	@ResponseBody
+	public String create(HttpServletRequest request) {
+		String datasuccess="success";
+		sBSSGLBpbjService.addInfo(request);
+		SBSSGL_SBGLEntity sbgl = sBSSGLSbglService.find(Long.parseLong(request.getParameter("sbid")));
+		sbgl.setM26("1"); //此时有关联的备品备件信息
+		sBSSGLSbglService.updateInfo(sbgl);
+		
+		return datasuccess;
+	}
+	
+	/**
+	 * 查看页面跳转（用户没有添加权限）
+	 * @param model
+	 */
+	@RequestMapping(value = "view/{sbid}" , method = RequestMethod.GET)
+	public String view(@PathVariable("sbid") Long sbid,Model model) {
+		List<Map<String, Object>> bpbjList = sBSSGLBpbjService.findListBySbId(sbid);
+		model.addAttribute("bpbjlist", bpbjList);
+		model.addAttribute("infosize", bpbjList.size());
+		model.addAttribute("sbid", sbid);//设备id   
+		return "sbssgl/bpbj/view";
+	}
+	
+	
+	/**
+	 * 导出备品备件清单word
+	 */
+	/*@RequestMapping(value = "export")
+	@ResponseBody
+	public String getWord(HttpServletRequest request, HttpServletResponse response) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("sbtype", request.getParameter("sbtype"));
+		map.put("qyname", request.getParameter("qyname"));
+		map.put("m2", request.getParameter("m2"));
+		map.put("m3", request.getParameter("m3"));
+		map.put("m5", request.getParameter("m5"));
+		map.put("m6", request.getParameter("m6"));
+		map.put("m7", request.getParameter("m7"));
+		map.putAll(getAuthorityMap());
+		Map<String, Object> dataMap = sBSSGLBpbjService.getWord(map);
+		String ftlName = dataMap.get("ftlname").toString();
+		//设置导出的文件名
+		String filename = "备品备件清单_" + DateUtils.getDateRandom() + new Random().nextInt(100) + ".doc";
+		//设置模板路径
+		String filePath = request.getSession().getServletContext().getRealPath("/") + "download/";
+		WordUtil.ireportWord(dataMap, ftlName, filePath, filename, request);
+		return "/download/" + filename;
+	}*/
+}
